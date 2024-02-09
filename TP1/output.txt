@@ -1,0 +1,60 @@
+┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐
+|   Lista de Modalidades Praticadas:   |
+
+A
+Andebol
+Atletismo
+
+
+B
+BTT
+Badminton
+Basquetebol
+
+
+C
+Ciclismo
+
+
+D
+Dança
+
+
+E
+Equitação
+Esgrima
+
+
+F
+Futebol
+
+
+K
+Karaté
+
+
+O
+Orientação
+
+
+P
+Parapente
+Patinagem
+
+
+T
+Triatlo
+
+
+|                                      |
+└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘
+
+
+┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐
+|                                                               |
+| Percentagem de atletas aptos para prática desportiva: 54.0%   |
+| Percentagem de atletas inaptos para prática desportiva: 46.0% |
+|                                                               |
+└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘
+
+
