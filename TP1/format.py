@@ -4,10 +4,11 @@
 
 class Format():
 
-    def __init__(self, data, modList, nApdtos, nInaptos, nTotal):
+    def __init__(self, data, escaloes, modList, nApdtos, nInaptos, nTotal):
 
         self.data = data
 
+        self.escaloes = escaloes
         self.modList = modList
         self.nAptos = nApdtos
         self.nInaptos = nInaptos
@@ -43,19 +44,22 @@ class Format():
 
     def format_percentage(self):
         perAptos = (self.nAptos / self.nTotal) * 100
-        perAptos = round(perAptos, 1)
         perInaptos = (self.nInaptos / self.nTotal) * 100
-        perInaptos = round(perInaptos, 1)
 
-        print("┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐")
-        print("|                                                               |")
-        print(f"| Percentagem de atletas aptos para prática desportiva: {perAptos}%   |")
-        print(f"| Percentagem de atletas inaptos para prática desportiva: {perInaptos}% |")
-        print("|                                                               |")
-        print("└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘\n\n")
+        print("┌━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐")
+        print("|                                                                 |")
+        print(f"| Percentagem de atletas aptos para prática desportiva = {perAptos:.2f}%   |")
+        print(f"| Percentagem de atletas inaptos para prática desportiva = {perInaptos:.2f}% |")
+        print("|                                                                 |")
+        print("└━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┘\n\n")
 
     
 
     def format_escalao(self):
-        #print(self.data)
-        pass
+        idade = 0
+
+        print("Percentagem por escalão etário: \n")
+        for escalao in self.escaloes:
+            if escalao != 0:
+                print(f'{idade}-{idade+4} = {(escalao / self.nTotal) * 100:.2f}%\n')
+            idade += 5

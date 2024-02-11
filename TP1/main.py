@@ -10,9 +10,9 @@ class Main():
 
     def __init__(self):
 
-        self.data = sys.stdin.readlines()
-        self.data.pop(0)
+        self.data = []
 
+        self.escaloes = [0] * 20
         self.modList = []
         self.nAptos = 0
         self.nInaptos = 0
@@ -20,7 +20,13 @@ class Main():
 
 
 
+    def calcular_escalao_etario(self, idade):
+        return idade // 5
+
     def parser(self):
+
+        self.data = sys.stdin.readlines()
+        self.data.pop(0)
         
         for line in self.data:
             dados = line.strip().split(',')
@@ -34,6 +40,9 @@ class Main():
 
             else:
                 self.nInaptos += 1
+
+            pos = self.calcular_escalao_etario(int(dados[5]))
+            self.escaloes[pos] += 1
         
         self.nTotal = self.nAptos + self.nInaptos
   
@@ -43,7 +52,7 @@ if __name__ == "__main__":
     main = Main()
     main.parser()
 
-    formatter = Format(main.data, main.modList, main.nAptos, main.nInaptos, main.nTotal)
+    formatter = Format(main.data, main.escaloes, main.modList, main.nAptos, main.nInaptos, main.nTotal)
     formatter.format_modlist()
     formatter.format_percentage()
     formatter.format_escalao()
