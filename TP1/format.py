@@ -1,7 +1,6 @@
 
 
 
-
 class Format():
 
     def __init__(self, data, escaloes, modList, nApdtos, nInaptos, nTotal):
@@ -61,5 +60,5 @@ class Format():
         print("Percentagem por escalão etário: \n")
         for escalao in self.escaloes:
             if escalao != 0:
-                print(f'{idade}-{idade+4} = {(escalao / self.nTotal) * 100:.2f}%\n')
+                print(f'[{idade}-{idade+4}] = {(escalao / self.nTotal) * 100:.2f}%\n')
             idade += 5

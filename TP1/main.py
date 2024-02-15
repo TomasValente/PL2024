@@ -1,10 +1,9 @@
 import sys
 from format import *
 
-sys.stdin = open('emd.csv', 'r')
+
+
 sys.stdout = open('output.txt', 'w')
-
-
 
 class Main():
 
