@@ -1,0 +1,3 @@
+SELECT id, name, salary FROM employees WHERE salary >= 820;
+SELECT ''' name, salary FROM employees '' WHERE salary >= 123;
+SEELCT id, name, salary ''' FORM employees HWERE '''salary >= 310;
